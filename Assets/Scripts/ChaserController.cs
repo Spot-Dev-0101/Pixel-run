@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChaserController : MonoBehaviour {
 
@@ -21,6 +22,7 @@ public class ChaserController : MonoBehaviour {
     {
         if(collision.gameObject.name == "Player"){
             //Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene("Start");
         }
     }
 }

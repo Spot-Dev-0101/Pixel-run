@@ -27,12 +27,19 @@ public class WorldController : MonoBehaviour {
             int randomBackgroundNumber = Random.Range(0, backgrounds.Length);
 
             GameObject newSegment = Instantiate(worldSegments[randomSegmentNumber], new Vector2(segmentWidth * currentSegments.Count, 0), Quaternion.identity);
-
             Instantiate(backgrounds[randomBackgroundNumber], new Vector3(segmentWidth * currentSegments.Count, 0, -7.61f), Quaternion.identity);
-
             currentSegments.Add(newSegment);
-
             CoinController.createCoin(newSegment.transform, coinObject[0]);
+
+            randomSegmentNumber = Random.Range(0, worldSegments.Length);
+            randomBackgroundNumber = Random.Range(0, backgrounds.Length);
+
+            newSegment = Instantiate(worldSegments[randomSegmentNumber], new Vector2(segmentWidth * currentSegments.Count, 0), Quaternion.identity);
+            Instantiate(backgrounds[randomBackgroundNumber], new Vector3(segmentWidth * currentSegments.Count, 0, -7.61f), Quaternion.identity);
+            currentSegments.Add(newSegment);
+            CoinController.createCoin(newSegment.transform, coinObject[0]);
+
+
         } else{
             //print((player.transform.position.x) + " =-= " + ((segmentWidth * currentSegments.Count) - segmentWidth));
         }

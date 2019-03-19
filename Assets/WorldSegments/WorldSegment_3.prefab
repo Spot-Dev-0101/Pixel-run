@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 61986446681229392}
   m_Layer: 0
   m_Name: floating_2 (1)
-  m_TagString: CanHaveCoin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 61251296573206406}
   m_Layer: 0
   m_Name: floating_2
-  m_TagString: CanHaveCoin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

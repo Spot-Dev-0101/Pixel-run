@@ -36,7 +36,8 @@ public class Background : MonoBehaviour {
 
     private void createLightning(){
         Transform prev = null;
-        int chance = 5;
+        int chance = 2;
+        List<GameObject> lightningList = new List<GameObject>();
         foreach (Transform child in transform){
             if(prev != null && Random.RandomRange(0, 10) < chance){
                 Vector3 origin = child.position;
@@ -50,10 +51,16 @@ public class Background : MonoBehaviour {
                 lightning.transform.localScale = new Vector3(0.1f, 0.1f, dist);
                 //lightning.transform.LookAt(target/2);
                 lightning.transform.rotation = Quaternion.LookRotation(direction);
-                lightning.transform.SetParent(gameObject.transform);
+                lightningList.Add(lightning);
+                //lightning.transform.SetParent(gameObject.transform);
 
             }
             prev = child;
         }
+
+        foreach(GameObject lightning in lightningList){
+            lightning.transform.SetParent(gameObject.transform);
+        }
+
     }
 }
