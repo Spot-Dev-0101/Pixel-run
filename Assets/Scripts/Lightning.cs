@@ -5,7 +5,7 @@ using UnityEngine;
 public class Lightning : MonoBehaviour {
     bool enabled = false;
     private float nextActionTime = 0.0f;
-    public float period = 0.1f;
+    //public float period = 0.1f;
     // Use this for initialization
     void Start () {
         nextActionTime = Random.RandomRange(0, 10);

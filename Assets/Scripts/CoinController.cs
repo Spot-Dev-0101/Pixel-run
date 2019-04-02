@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinController : MonoBehaviour {
 
-    public static void createCoin(Transform tf, GameObject coinObject){
+    public static void createCoin(Transform tf, GameObject coinObject, GameObject enemy){
         print("created normal coin");
         foreach (Transform child in tf)
         {
@@ -17,6 +17,10 @@ public class CoinController : MonoBehaviour {
                 if (randInt < 5)
                 {//single coin
                     Instantiate(coinObject, child.position + new Vector3(0, 1, 0), Quaternion.identity);
+                } 
+
+                if(randInt < 3){
+                    Instantiate(enemy, child.position + new Vector3(0, 1, 0), Quaternion.identity);
                 }
 
                 if (randInt > 5)

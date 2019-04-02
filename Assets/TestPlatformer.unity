@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 668187845}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,7 +379,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 668187841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.78, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1625259032}
@@ -574,6 +574,7 @@ MonoBehaviour:
   - {fileID: 1799107336033622, guid: 7c4687746cca64e08852fe16a1fd77a2, type: 2}
   coinObject:
   - {fileID: 1868639158705786, guid: 284d78fa180704d3eb5400d8c19119dd, type: 2}
+  enemy: {fileID: 1160867947914148, guid: 55f55fbe02bb34d43838f2de8735dd92, type: 2}
   segmentWidth: 16.3
   player: {fileID: 668187841}
   currentSegments: []
@@ -727,7 +728,7 @@ GameObject:
   - component: {fileID: 1625259033}
   m_Layer: 0
   m_Name: New Sprite
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

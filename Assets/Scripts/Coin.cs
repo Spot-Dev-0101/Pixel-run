@@ -43,9 +43,12 @@ public class Coin : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        anim.Play();
-        started = true;
-        pc.score += 1;
+        if(collision.gameObject.tag == "player"){
+            anim.Play();
+            started = true;
+            pc.score += 1;
+        }
+
 
     }
 

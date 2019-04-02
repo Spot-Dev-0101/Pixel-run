@@ -23,6 +23,9 @@ public class ChaserController : MonoBehaviour {
         if(collision.gameObject.name == "Player"){
             //Application.LoadLevel(Application.loadedLevel);
             SceneManager.LoadScene("Start");
+        } else if(collision.gameObject.name == "enemy")
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
