@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 
     public int score = 0;
 
-    private float speedMulti = 1000;
+    public float speedMulti = 1000;
 
 
     private bool canJump = true;

@@ -8,6 +8,7 @@ public class WorldController : MonoBehaviour {
     public GameObject[] backgrounds;
     public GameObject[] coinObject;
     public GameObject enemy;
+    public GameObject powerup;
     public float segmentWidth = 16.3f;
     public GameObject player;
 
@@ -30,7 +31,7 @@ public class WorldController : MonoBehaviour {
             GameObject newSegment = Instantiate(worldSegments[randomSegmentNumber], new Vector2(segmentWidth * currentSegments.Count, 0), Quaternion.identity);
             Instantiate(backgrounds[randomBackgroundNumber], new Vector3(segmentWidth * currentSegments.Count, 0, -7.61f), Quaternion.identity);
             currentSegments.Add(newSegment);
-            CoinController.createCoin(newSegment.transform, coinObject[0], enemy);
+            CoinController.createCoin(newSegment.transform, coinObject[0], enemy, powerup);
 
             randomSegmentNumber = Random.Range(0, worldSegments.Length);
             randomBackgroundNumber = Random.Range(0, backgrounds.Length);
@@ -38,7 +39,7 @@ public class WorldController : MonoBehaviour {
             newSegment = Instantiate(worldSegments[randomSegmentNumber], new Vector2(segmentWidth * currentSegments.Count, 0), Quaternion.identity);
             Instantiate(backgrounds[randomBackgroundNumber], new Vector3(segmentWidth * currentSegments.Count, 0, -7.61f), Quaternion.identity);
             currentSegments.Add(newSegment);
-            CoinController.createCoin(newSegment.transform, coinObject[0], enemy);
+            CoinController.createCoin(newSegment.transform, coinObject[0], enemy, powerup);
 
 
         } else{
